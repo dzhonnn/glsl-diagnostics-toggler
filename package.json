@@ -4,6 +4,10 @@
   "displayName": "glsl-diagnostics-toggler",
   "description": "Simple button for toggle `webgl-glsl-editor.diagnostics`. ",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzhonnn/glsl-diagnostics-toggler.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
