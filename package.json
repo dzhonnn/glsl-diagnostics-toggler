@@ -1,11 +1,15 @@
 {
   "name": "glsl-diagnostics-toggler",
+  "publisher": "dzhonnn",
   "displayName": "glsl-diagnostics-toggler",
   "description": "Simple button for toggle `webgl-glsl-editor.diagnostics`. ",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.80.0"
   },
+  "extensionDependencies": [
+    "raczzalan.webgl-glsl-editor"
+  ],
   "categories": [
     "Other"
   ],
@@ -20,9 +24,14 @@
       {
         "id": "glsl",
         "extensions": [
-          ".glsl", ".vert", ".frag"
+          ".glsl",
+          ".vert",
+          ".frag"
         ],
-        "aliases": ["GLSL", "glsl"]
+        "aliases": [
+          "GLSL",
+          "glsl"
+        ]
       }
     ],
     "commands": [
