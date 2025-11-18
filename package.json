@@ -1,0 +1,62 @@
+{
+  "name": "glsl-diagnostics-toggler",
+  "displayName": "glsl-diagnostics-toggler",
+  "description": "Simple button for toggle `webgl-glsl-editor.diagnostics`. ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:glsl",
+    "onLanguage:vert",
+    "onLanguage:frag"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "glsl",
+        "extensions": [
+          ".glsl", ".vert", ".frag"
+        ],
+        "aliases": ["GLSL", "glsl"]
+      }
+    ],
+    "commands": [
+      {
+        "command": "glsl-diagnostics-toggler.toggle",
+        "title": "Toggle GLSL Diagnostics"
+      }
+    ],
+    "menus": {
+      "statusBar/alignment": [
+        {
+          "command": "glsl-diagnostics-toggler.toggle",
+          "alignment": "right",
+          "group": "9_glsl"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.106.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.46.3",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
